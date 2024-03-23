@@ -28,11 +28,11 @@
               <h3>Single Entry</h3>
               <h4><sup>$</sup>100<span> / 3Week</span></h4>
               <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li class="na">Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
+                <li>Sleeping Hotel</li>
+                <li>City Transport</li>
+                <li>Good food Lunch</li>
+                <li class="na">Return</li>
+                <li class="na">Bonus Gift</li>
               </ul>
               <div class="btn-wrap">
                 <a href="#" class="btn-buy">Book Now</a>
@@ -45,11 +45,11 @@
               <h3>SIngle Entry</h3>
               <h4><sup>$</sup>190<span> / month</span></h4>
               <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li class="na">Massa ultricies mi</li>
+              <li>Sleeping Hotel</li>
+                <li>City Transport</li>
+                <li>Good food Lunch</li>
+                <li>Return</li>
+                <li class="na">Bonus Gift</li>
               </ul>
               <div class="btn-wrap">
                 <a href="#" class="btn-buy">Book Now</a>
@@ -62,11 +62,11 @@
               <h3>Double Entry</h3>
               <h4><sup>$</sup>200<span> / month</span></h4>
               <ul>
-                <li>Aida dere</li>
-                <li>Nec feugiat nisl</li>
-                <li>Nulla at volutpat dola</li>
-                <li>Pharetra massa</li>
-                <li>Massa ultricies mi</li>
+              <li>Sleeping Hotel</li>
+                <li>City Transport</li>
+                <li>Good food Lunch</li>
+                <li >Return</li>
+                <li >Bonus Gift</li>
               </ul>
               <div class="btn-wrap">
                 <a href="#" class="btn-buy">Book Now</a>
@@ -77,9 +77,8 @@
         </div>
 
       </div>
-    </section><!-- End Pricing Section -->
+    </section>
 
-    <!-- ======= Cta Pricing Section ======= -->
     <section id="cta-pricing" class="cta-pricing">
       <div class="container">
 

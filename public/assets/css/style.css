@@ -792,6 +792,18 @@ section {
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
+.cardapply:not(.bottom) {
+  opacity: 0;
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  bottom: 0;
+  color: #2b2320;
+  z-index: 999;
+  transition: all ease-in-out 0.3s;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+}
 
 .portfolio .portfolio-item .portfolio-info {
   opacity: 0;
@@ -822,7 +834,7 @@ section {
 .portfolio .portfolio-item .portfolio-info .details-link {
   position: absolute;
   right: 40px;
-  font-size: 24px;
+  font-size: 18px;
   top: calc(50% - 18px);
   color: #483b36;
 }
@@ -1083,7 +1095,7 @@ section {
   display: block;
   font-size: 13px;
   font-weight: 400;
-  color:#ffffff;
+  color:#007c9b;
 }
 
 .team .member .member-info p {
@@ -1267,7 +1279,7 @@ section {
 }
 
 .pricing .featured {
-  background: #fd5c28;
+  background: #007c9b;
   box-shadow: none;
 }
 
@@ -2192,4 +2204,13 @@ section {
   background: #fd5c28;
   color: #fff;
   text-decoration: none;
+}
+.rowsignIn{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+  padding-bottom: 40px;
 }

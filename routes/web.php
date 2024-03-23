@@ -9,7 +9,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PackageController;
 use App\Http\Controllers\TestmonialController;
 use App\Http\Controllers\PostController;
-;
+use App\Http\Controllers\SignInController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,3 +29,4 @@ Route::get('/blog',[BlogController::class,'index']);
 Route::get('/packageprice',[PackageController::class,'index']);
 Route::get('/testmonials',[TestmonialController::class,'index']);
 Route::get('/visa',[PostController::class,'index']);
+Route::get('/signin',[SignInController::class,'index']);

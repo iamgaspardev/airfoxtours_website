@@ -71,7 +71,7 @@
           <li><a href="/service">Services</a></li>
           <li><a href="/testmonials">Testimonials</a></li>
           <li><a href="/packageprice">Pricing</a></li>
-          <li><a href="/visa">Details</a></li>
+          <li><a href="/visa">Tours</a></li>
           <li><a href="/blog">Blog</a></li>
           <li class="dropdown"><a href="#"><span>What we do</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -84,6 +84,9 @@
           </li>
           <li><a href="/contact">Contact</a></li>
         </ul>
+        <div class="cta-btn-container text-center">
+        <a class="cta-btn align-middle" href="/signin">Sign In</a>
+      </div>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
@@ -148,9 +151,9 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; Copyright <strong><span>Flattern</span></strong>. All Rights Reserved
+          &copy; Copyright <strong><span>airfoxtours</span></strong>. All Rights Reserved
         </div>
-        <div class="credits">
+        <div class="credits" style="color:#ffff">
           developed by <a href="#">trusttechnology</a>
         </div>
       </div>
