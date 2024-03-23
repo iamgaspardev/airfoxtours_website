@@ -72,6 +72,7 @@
           <li><a href="/testmonials">Testimonials</a></li>
           <li><a href="/packageprice">Pricing</a></li>
           <li><a href="/visa">Tours</a></li>
+          <li><a href="#">Investments</a></li>
           <li><a href="/blog">Blog</a></li>
           <li class="dropdown"><a href="#"><span>What we do</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
@@ -88,6 +89,7 @@
         <a class="cta-btn align-middle" href="/signin">Sign In</a>
       </div>
         <i class="bi bi-list mobile-nav-toggle"></i>
+        
       </nav><!-- .navbar -->
 
     </div>
@@ -127,11 +129,9 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Investments</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Tours</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Visa Processing</a></li>
             </ul>
           </div>
 
