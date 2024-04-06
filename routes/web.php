@@ -34,9 +34,9 @@ Route::get('/blog',[BlogController::class,'index']);
 Route::get('/packageprice',[PackageController::class,'index']);
 Route::get('/testmonials',[TestmonialController::class,'index']);
 Route::get('/visa',[PostController::class,'index']);
-
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 // Route for displaying the login form (GET request)
-Route::get('/signin', [LoginController::class, 'showLoginForm'])->name('login')->name('login');;
+Route::get('/signin', [LoginController::class, 'showLoginForm'])->name('login');
 // Route for handling the login form submission (POST request)
 Route::post('/signin', [LoginController::class, 'login'])->name('login.submit');
 // Route for displaying the registration form

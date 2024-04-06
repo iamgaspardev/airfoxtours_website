@@ -86,8 +86,19 @@
           <li><a href="/contact">Contact</a></li>
         </ul>
         <div class="cta-btn-container text-center">
+        @auth
+        <!-- Show logout button -->
+        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+            @csrf
+            <div class="text-center">
+    <button type="submit" style="background-color: transparent; color: orange; border: 1px solid orange; padding: 10px 20px; border-radius: 5px; cursor: pointer; margin-left:10px;">Logout</button>
+   </div>
+        </form>
+         @else
+        <!-- Show Sign In button -->
         <a class="cta-btn align-middle" href="/signin">Sign In</a>
-      </div>
+        @endauth
+</div>
         <i class="bi bi-list mobile-nav-toggle"></i>
         
       </nav><!-- .navbar -->
@@ -176,7 +187,7 @@
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
+  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
