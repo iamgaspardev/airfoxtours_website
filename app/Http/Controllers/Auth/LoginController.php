@@ -2,30 +2,53 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Models\User;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
-use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    use AuthenticatesUsers;
-
-    protected $redirectTo = '/';
-
-    public function __construct()
+    /**
+     * Show the application's login form.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function showLoginForm()
     {
-        $this->middleware('guest')->except('logout');
+        return view('auth.login');
     }
 
-    protected function redirectTo()
+    /**
+     * Handle a login request to the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response|\Illuminate\Http\JsonResponse
+     */
+    // public function login(Request $request)
+    // {
+    //     $credentials = $request->only('email', 'password');
+
+    //     if (Auth::attempt($credentials)) {
+    //         // Authentication passed...
+    //         $user = Auth::user();
+    //         if ($user->role === 'usr') {
+    //             return redirect()->route('user.home');
+    //         } elseif ($user->role === 'adm') {
+    //             return redirect()->route('admin.home');
+    //         }
+    //     }
+
+    //     // Authentication failed...
+    //     return redirect()->back()->withErrors(['email' => 'These credentials do not match our records.'])->withInput($request->only('email'));
+    // }
+    protected function authenticated(Request $request, $user)
     {
-        if (auth()->user()->role == 'adm') {
-            return '/dashboard/admin';
-        } else {
-            return '/dashboard/home';
+        if ($user->role === 'usr') {
+            return redirect()->route('user.home'); 
+        } elseif ($user->role === 'adm') {
+            return redirect()->route('admin.home'); 
         }
+
+        return redirect()->back()->withErrors(['email' => 'These credentials do not match our records.'])->withInput($request->only('email'));
     }
 }

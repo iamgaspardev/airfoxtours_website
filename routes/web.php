@@ -13,6 +13,8 @@ use App\Http\Controllers\SignInController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\dashboard\userController;
+use App\Http\Controllers\dashboard\adminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,15 +34,17 @@ Route::get('/blog',[BlogController::class,'index']);
 Route::get('/packageprice',[PackageController::class,'index']);
 Route::get('/testmonials',[TestmonialController::class,'index']);
 Route::get('/visa',[PostController::class,'index']);
-// Route::get('/signin',[SignInController::class,'index']);
-Route::post('/dashboard/home', [HomeController::class, 'home']);
-// Route for displaying the login form (GET request)
-Route::get('/signin', [LoginController::class, 'showLoginForm'])->name('login');
 
+// Route for displaying the login form (GET request)
+Route::get('/signin', [LoginController::class, 'showLoginForm'])->name('login')->name('login');;
 // Route for handling the login form submission (POST request)
-Route::post('/signin', [LoginController::class, 'login']);
+Route::post('/signin', [LoginController::class, 'login'])->name('login.submit');
 // Route for displaying the registration form
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-
 // Route for handling the registration form submission
 Route::post('/register', [RegisterController::class, 'register']);
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [userController::class, 'index'])->name('user.home');
+    Route::get('/dashboard/admin', [adminController::class, 'index'])->name('admin.home');
+});
