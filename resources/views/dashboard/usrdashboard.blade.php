@@ -1,8 +1,6 @@
 @extends('layouts.layouts')
 @section('content')
 
-
-
 <main id="main">
 
     <!-- ======= Cta Section ======= -->

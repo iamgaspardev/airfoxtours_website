@@ -15,6 +15,8 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\dashboard\userController;
 use App\Http\Controllers\dashboard\adminController;
+use App\Http\Controllers\TourController;
+use App\Http\Controllers\TeamController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,7 +28,7 @@ use App\Http\Controllers\dashboard\adminController;
 |
 */
 
-Route::get('/',[AppController::class,'index']);
+Route::get('/',[HomeController::class,'index']);
 Route::get('/service',[ServiceController::class,'index']);
 Route::get('/about',[AboutController::class,'index']);
 Route::get('/contact',[ContactController::class,'index']);
@@ -46,5 +48,9 @@ Route::post('/register', [RegisterController::class, 'register']);
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [userController::class, 'index'])->name('user.home');
-    Route::get('/dashboard/admin', [adminController::class, 'index'])->name('admin.home');
+    Route::get('/dashboard/admindashboard', [adminController::class, 'index'])->name('admin.home');
+    Route::get('/tour/create', [TourController::class, 'create'])->name('tour.create');
+    Route::post('/tour', [TourController::class, 'store'])->name('tour.store');
+    Route::get('/team/create', [TeamController::class, 'create'])->name('team.create');
+    Route::post('/team/store', [TeamController::class, 'store'])->name('team.store');
 });
