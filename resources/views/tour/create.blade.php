@@ -38,10 +38,9 @@
                         </div>
                         <div class="mb-3"></div>
                         <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
+                       </form>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
