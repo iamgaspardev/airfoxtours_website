@@ -3,7 +3,7 @@
 
 <main id="main">
 
-    <!-- ======= Cta Section ======= -->
+<!-- ======= Cta Section ======= -->
 <section id="cta" class="cta">
   <div class="container">
 

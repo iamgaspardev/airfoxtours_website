@@ -69,7 +69,7 @@
         @auth
           <li><a class="active" href="#">Upload Testmony</a></li>
           <li><a href="/tour/create">Upload Post</a></li>
-          <li><a href="#">View Application</a></li>
+          <li><a href="/consultations">View Application</a></li>
           <li><a href="/team/create">Add Team Member</a></li>
           @else
           <li><a class="active" href="/">Home</a></li>
@@ -126,8 +126,8 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Airfox Tours</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
+              Arusha road Street <br>
+              <br>
               United States <br><br>
               <strong>Phone:</strong> +255 662 41646<br>
               <strong>Email:</strong> info@airfoxtours.com<br>

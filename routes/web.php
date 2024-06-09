@@ -17,6 +17,7 @@ use App\Http\Controllers\dashboard\userController;
 use App\Http\Controllers\dashboard\adminController;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\ConsultationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,7 +29,7 @@ use App\Http\Controllers\TeamController;
 |
 */
 
-Route::get('/',[HomeController::class,'index']);
+Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/service',[ServiceController::class,'index']);
 Route::get('/about',[AboutController::class,'index']);
 Route::get('/contact',[ContactController::class,'index']);
@@ -45,6 +46,9 @@ Route::post('/signin', [LoginController::class, 'login'])->name('login.submit');
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 // Route for handling the registration form submission
 Route::post('/register', [RegisterController::class, 'register']);
+Route::get('/consult-us/{image}', [ConsultationController::class, 'showForm'])->name('consultationform');
+// Route::get('/consult-us', [ConsultationController::class, 'showForm'])->name('consultationform');
+Route::post('/consult-us', [ConsultationController::class, 'requestConsultation'])->name('consultation.request');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [userController::class, 'index'])->name('user.home');
@@ -53,4 +57,6 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/tour', [TourController::class, 'store'])->name('tour.store');
     Route::get('/team/create', [TeamController::class, 'create'])->name('team.create');
     Route::post('/team/store', [TeamController::class, 'store'])->name('team.store');
+    Route::get('/consultations', [ConsultationController::class, 'index'])->name('consultations.list');
+
 });
