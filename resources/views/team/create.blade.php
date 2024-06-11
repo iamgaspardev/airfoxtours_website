@@ -53,7 +53,7 @@
 
                         <div class="mb-3"></div>
 
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary" style="background-color: #007c9b; border-color: #007c9b; color: #fff;">
                             {{ __('Add Team Member') }}
                         </button>
 

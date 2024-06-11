@@ -67,9 +67,10 @@
       <nav id="navbar" class="navbar">
         <ul>
         @auth
-          <li><a class="active" href="#">Upload Testmony</a></li>
+          <li><a class="active" href="/testimonial/create">Upload Testmony</a></li>
           <li><a href="/tour/create">Upload Post</a></li>
           <li><a href="/consultations">View Application</a></li>
+          <li><a href="/testimonials/manage">Uploaded Testimonials</a></li>
           <li><a href="/team/create">Add Team Member</a></li>
           @else
           <li><a class="active" href="/">Home</a></li>

@@ -7,7 +7,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PackageController;
-use App\Http\Controllers\TestmonialController;
+// use App\Http\Controllers\TestmonialController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SignInController;
 use App\Http\Controllers\Auth\LoginController;
@@ -18,6 +18,8 @@ use App\Http\Controllers\dashboard\adminController;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\ConsultationController;
+use App\Http\Controllers\TestimonialController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,7 +37,7 @@ Route::get('/about',[AboutController::class,'index']);
 Route::get('/contact',[ContactController::class,'index']);
 Route::get('/blog',[BlogController::class,'index']);
 Route::get('/packageprice',[PackageController::class,'index']);
-Route::get('/testmonials',[TestmonialController::class,'index']);
+// Route::get('/testmonials',[TestmonialController::class,'index']);
 Route::get('/visa',[PostController::class,'index']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 // Route for displaying the login form (GET request)
@@ -49,6 +51,7 @@ Route::post('/register', [RegisterController::class, 'register']);
 Route::get('/consult-us/{image}', [ConsultationController::class, 'showForm'])->name('consultationform');
 // Route::get('/consult-us', [ConsultationController::class, 'showForm'])->name('consultationform');
 Route::post('/consult-us', [ConsultationController::class, 'requestConsultation'])->name('consultation.request');
+Route::get('/testmonials', [TestimonialController::class, 'index'])->name('testimonials.index');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [userController::class, 'index'])->name('user.home');
@@ -58,5 +61,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/team/create', [TeamController::class, 'create'])->name('team.create');
     Route::post('/team/store', [TeamController::class, 'store'])->name('team.store');
     Route::get('/consultations', [ConsultationController::class, 'index'])->name('consultations.list');
-
+    
+    Route::get('/testimonial/create', [TestimonialController::class, 'create'])->name('testimonial.create');
+    Route::post('/testimonial/store', [TestimonialController::class, 'store'])->name('testimonial.store');
+    Route::delete('/testimonial/destroy/{id}', [TestimonialController::class, 'destroy'])->name('testimonial.destroy');
+    Route::get('/testimonials/manage', [TestimonialController::class, 'manage'])->name('testimonials.manage');
 });
