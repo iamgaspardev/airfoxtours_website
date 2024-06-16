@@ -3,10 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Tour;
+use App\Models\TeamMember;
 
 class PostController extends Controller
 {
     public function index(){
-        return view('posts');
+        
+        $tours = Tour::all();
+        
+        $teamMembers = TeamMember::all();
+
+        return view('posts', compact('tours', 'teamMembers'));
     }
 }

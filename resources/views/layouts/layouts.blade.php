@@ -68,9 +68,25 @@
         <ul>
         @auth
           <li><a class="active" href="/testimonial/create">Upload Testmony</a></li>
-          <li><a href="/tour/create">Upload Post</a></li>
+          <li class="dropdown"><a href="#"><span>Manage Blog</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a  href="/blogs/create">Publish on Blog</a></li>
+              <li><a  href="/blogs/create">View  Blog</a>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Posts</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a  href="/tour/create">Upload Post</a></li>
+              <li><a  href="/tour/create">View Post</a></li>
+            </ul>
+          </li>
           <li><a href="/consultations">View Application</a></li>
-          <li><a href="/testimonials/manage">Uploaded Testimonials</a></li>
+          <li class="dropdown"><a href="#"><span>Testimonials</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a  href="/testimonial/create">Uploaded Testimonials</a></li>
+              <li><a  href="/testimonials/manage">View Testimonials</a></li>
+            </ul>
+          </li>
           <li><a href="/team/create">Add Team Member</a></li>
           @else
           <li><a class="active" href="/">Home</a></li>

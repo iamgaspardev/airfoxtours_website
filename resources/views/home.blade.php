@@ -6,7 +6,7 @@
             <div class="carousel-inner" role="listbox">
 
                 <!-- Slide 1 -->
-                <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.jpg);">
+                <div class="carousel-item active" style="background-image: url(assets/img/slide/slide-1.png);">
                     <div class="carousel-container">
                         <div class="carousel-content animate__animated animate__fadeInUp">
                             <h2>Your Gateway to Unforgettable Journeys</h2>
@@ -20,7 +20,7 @@
                 </div>
 
                 <!-- Slide 2 -->
-                <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.jpg);">
+                <div class="carousel-item" style="background-image: url(assets/img/slide/slide-2.png);">
                     <div class="carousel-container">
                         <div class="carousel-content animate__animated animate__fadeInUp">
                             <h2>Seamless Travel, Every Step of the Way</h2>
@@ -34,7 +34,7 @@
                 </div>
 
                 <!-- Slide 3 -->
-                <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.jpg);">
+                <div class="carousel-item" style="background-image: url(assets/img/slide/slide-3.png);">
                     <div class="carousel-container">
                         <div class="carousel-content animate__animated animate__fadeInUp">
                             <h2>Your Travel Experience, Elevated</h2>
@@ -150,7 +150,9 @@
         <div>
             @include('components.whyus')
         </div>
+
         <!-- ======= Portfolio Section ======= -->
+
         <section id="portfolio" class="portfolio">
             <div class="container">
 
@@ -164,9 +166,6 @@
                 </div>
 
                 <div class="row portfolio-container" data-aos="fade-up">
-
-
-
                     <div class="row">
                         @foreach ($tours as $tour)
                             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
@@ -186,14 +185,12 @@
                                 </div>
                             </div>
                         @endforeach
-
-
                     </div>
-
                 </div>
 
             </div>
-        </section><!-- End Portfolio Section -->
+        </section>
+        <!-- End Portfolio Section -->
 
         <!-- ======= Our Team Section ======= -->
         <section id="team" class="team section-bg">

@@ -19,4 +19,5 @@ class HomeController extends Controller
         // Pass both tours and team members to the home view
         return view('home', compact('tours', 'teamMembers'));
     }
+    
 }
