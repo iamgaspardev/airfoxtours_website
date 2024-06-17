@@ -172,11 +172,13 @@
                                 <div class="card">
                                     <img src="{{ asset('uploads/' . $tour->image) }}" class="img-fluid card-img-top"
                                         alt="{{ $tour->title }}" style="height: 200px; object-fit: cover;">
-                                    <div class="card-body">
+                                    <div class="card-body col">
                                         <h4 class="card-title">{{ $tour->title }}</h4>
                                         <p class="card-text">{{ \Illuminate\Support\Str::limit($tour->description, 100) }}
                                         </p>
-
+                                        <a style=" color: orange; border-color: #007c9b;fontweight:bolder">
+                                            Price: {{ $tour->price }}$
+                                        </a></br>
                                         <a href="{{ route('consultationform', ['image' => basename($tour->image)]) }}"
                                             class="btn btn-primary mt-2"
                                             style="background-color: #007c9b; color: white; border-color: #007c9b;">Consult
@@ -207,79 +209,79 @@
                     @include('team-members', ['teamMembers' => $teamMembers])
                 </div>
                 <!-- <div class="row">
-                                                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                                                    <div class="member" data-aos="fade-up">
-                                                        <div class="member-img">
-                                                            <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                                                            <div class="social">
-                                                                <a href=""><i class="bi bi-twitter"></i></a>
-                                                                <a href=""><i class="bi bi-facebook"></i></a>
-                                                                <a href=""><i class="bi bi-instagram"></i></a>
-                                                                <a href=""><i class="bi bi-linkedin"></i></a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="member-info">
-                                                            <h4>Mr Fuad Ally</h4>
-                                                            <span>Chief Executive Officer</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                                                                    <div class="member" data-aos="fade-up">
+                                                                        <div class="member-img">
+                                                                            <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                                                                            <div class="social">
+                                                                                <a href=""><i class="bi bi-twitter"></i></a>
+                                                                                <a href=""><i class="bi bi-facebook"></i></a>
+                                                                                <a href=""><i class="bi bi-instagram"></i></a>
+                                                                                <a href=""><i class="bi bi-linkedin"></i></a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="member-info">
+                                                                            <h4>Mr Fuad Ally</h4>
+                                                                            <span>Chief Executive Officer</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
 
-                                                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                                                    <div class="member" data-aos="fade-up" data-aos-delay="100">
-                                                        <div class="member-img">
-                                                            <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                                                            <div class="social">
-                                                                <a href=""><i class="bi bi-twitter"></i></a>
-                                                                <a href=""><i class="bi bi-facebook"></i></a>
-                                                                <a href=""><i class="bi bi-instagram"></i></a>
-                                                                <a href=""><i class="bi bi-linkedin"></i></a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="member-info">
-                                                            <h4>Ummyhadjat Othuman</h4>
-                                                            <span>Marketing Director</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                                                                    <div class="member" data-aos="fade-up" data-aos-delay="100">
+                                                                        <div class="member-img">
+                                                                            <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                                                                            <div class="social">
+                                                                                <a href=""><i class="bi bi-twitter"></i></a>
+                                                                                <a href=""><i class="bi bi-facebook"></i></a>
+                                                                                <a href=""><i class="bi bi-instagram"></i></a>
+                                                                                <a href=""><i class="bi bi-linkedin"></i></a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="member-info">
+                                                                            <h4>Ummyhadjat Othuman</h4>
+                                                                            <span>Marketing Director</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
 
-                                                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                                                    <div class="member" data-aos="fade-up" data-aos-delay="200">
-                                                        <div class="member-img">
-                                                            <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                                                            <div class="social">
-                                                                <a href=""><i class="bi bi-twitter"></i></a>
-                                                                <a href=""><i class="bi bi-facebook"></i></a>
-                                                                <a href=""><i class="bi bi-instagram"></i></a>
-                                                                <a href=""><i class="bi bi-linkedin"></i></a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="member-info">
-                                                            <h4>Mr Fuad Ally</h4>
-                                                            <span>Chief Executive Officer</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                                                                    <div class="member" data-aos="fade-up" data-aos-delay="200">
+                                                                        <div class="member-img">
+                                                                            <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                                                                            <div class="social">
+                                                                                <a href=""><i class="bi bi-twitter"></i></a>
+                                                                                <a href=""><i class="bi bi-facebook"></i></a>
+                                                                                <a href=""><i class="bi bi-instagram"></i></a>
+                                                                                <a href=""><i class="bi bi-linkedin"></i></a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="member-info">
+                                                                            <h4>Mr Fuad Ally</h4>
+                                                                            <span>Chief Executive Officer</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
 
-                                                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                                                    <div class="member" data-aos="fade-up" data-aos-delay="300">
-                                                        <div class="member-img">
-                                                            <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                                                            <div class="social">
-                                                                <a href=""><i class="bi bi-twitter"></i></a>
-                                                                <a href=""><i class="bi bi-facebook"></i></a>
-                                                                <a href=""><i class="bi bi-instagram"></i></a>
-                                                                <a href=""><i class="bi bi-linkedin"></i></a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="member-info">
-                                                            <h4>Ummyhadjat Othuman</h4>
-                                                            <span>Marketing Director</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                                                                    <div class="member" data-aos="fade-up" data-aos-delay="300">
+                                                                        <div class="member-img">
+                                                                            <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                                                                            <div class="social">
+                                                                                <a href=""><i class="bi bi-twitter"></i></a>
+                                                                                <a href=""><i class="bi bi-facebook"></i></a>
+                                                                                <a href=""><i class="bi bi-instagram"></i></a>
+                                                                                <a href=""><i class="bi bi-linkedin"></i></a>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="member-info">
+                                                                            <h4>Ummyhadjat Othuman</h4>
+                                                                            <span>Marketing Director</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
 
-                                            </div> -->
+                                                            </div> -->
 
             </div>
         </section><!-- End Our Team Section -->

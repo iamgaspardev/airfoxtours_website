@@ -67,6 +67,8 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/testimonial/destroy/{id}', [TestimonialController::class, 'destroy'])->name('testimonial.destroy');
     Route::get('/testimonials/manage', [TestimonialController::class, 'manage'])->name('testimonials.manage');
     
+     Route::get('/blogs/view', [BlogController::class, 'homeland'])->name('blogs.home');
      Route::get('/blogs/create', [BlogController::class, 'create'])->name('blogs.create');
      Route::post('/blogs/store', [BlogController::class, 'store'])->name('blogs.store');
+     Route::delete('blogs/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
 });
