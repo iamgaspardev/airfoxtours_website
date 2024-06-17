@@ -74,7 +74,7 @@
                         <li class="dropdown"><a href="#"><span>Posts</span> <i class="bi bi-chevron-down"></i></a>
                             <ul>
                                 <li><a href="/tour/create">Upload Post</a></li>
-                                <li><a href="/tour/create">View Post</a></li>
+                                <li><a href="/posts/views">View Post</a></li>
                             </ul>
                         </li>
 

@@ -71,4 +71,8 @@ Route::middleware(['auth'])->group(function () {
      Route::get('/blogs/create', [BlogController::class, 'create'])->name('blogs.create');
      Route::post('/blogs/store', [BlogController::class, 'store'])->name('blogs.store');
      Route::delete('blogs/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
+
+     Route::get('/posts/views', [TourController::class, 'index'])->name('tours.index');
+     Route::delete('/tour/{tour}', [TourController::class, 'destroy'])->name('tour.destroy');
+
 });

@@ -6,6 +6,11 @@ use App\Models\Tour;
 
 class TourController extends Controller
 {
+    public function index()
+    {
+        $tours = Tour::all();
+        return view('tour.toursview', compact('tours'));
+    }
     public function create()
     {
         return view('tour/create');
@@ -34,6 +39,11 @@ class TourController extends Controller
         $tour->save();
 
         return redirect()->back()->with('success', 'Tour created successfully.');
+    }
+     public function destroy(Tour $tour)
+    {
+        $tour->delete();
+        return redirect()->route('tours.index')->with('success', 'Tour deleted successfully!');
     }
 }
 
