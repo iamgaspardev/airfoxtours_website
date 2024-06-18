@@ -92,7 +92,7 @@
                         <li><a href="/about">About</a></li>
                         <li><a href="/service">Services</a></li>
                         <li><a href="/testmonials">Testimonials</a></li>
-                        <li><a href="/packageprice">Pricing</a></li>
+                        <li><a href="/packageprice">Investment</a></li>
                         <li><a href="/visa">Tours</a></li>
                         <li><a href="/blog">Blog</a></li>
                         <li class="dropdown"><a href="#"><span>What we do</span> <i
