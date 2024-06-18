@@ -40,6 +40,10 @@
         <!-- ======= Pricing Section ======= -->
         <section id="pricing" class="pricing">
             <div class="container">
+                <div class="section-title" data-aos="fade-up">
+                    <h2><strong>Our Investment Packages</strong></h2>
+                    <hr class="title-line">
+                </div>
 
                 <div class="row">
 

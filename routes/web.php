@@ -36,7 +36,7 @@ Route::get('/service',[ServiceController::class,'index']);
 Route::get('/about',[AboutController::class,'index']);
 Route::get('/contact',[ContactController::class,'index']);
 Route::get('/blog',[BlogController::class,'index']);
-Route::get('/packageprice',[PackageController::class,'index']);
+Route::get('/investments',[PackageController::class,'index']);
 // Route::get('/testmonials',[TestmonialController::class,'index']);
 Route::get('/visa',[PostController::class,'index']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

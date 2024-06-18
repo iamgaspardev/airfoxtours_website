@@ -557,7 +557,7 @@ section {
 }
 
 .section-bg {
-  background-color: #f6f3f2;
+  background-color: #0478a3;
 }
 
 .section-title {
@@ -786,7 +786,7 @@ section {
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
   color: #fff;
-  background: #007c9b;
+  background: linear-gradient(to right, #007c9b, #fe825a);
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -1045,7 +1045,12 @@ section {
   text-align: center;
   border-radius: 5px;
   background: #fff;
+  color: white;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.color-primary {
+  color: #ffffff;
 }
 
 .team .member .member-img {
@@ -1670,6 +1675,15 @@ section {
   margin-bottom: 20px;
 }
 
+.title-line {
+  width: 80px;
+  border: 2px solid #007c9b;
+  border-radius: 5px;
+  /* Adjust the value to change the radius */
+  margin: 10px auto;
+  /* Remove the border */
+}
+
 .blog .entry .entry-footer {
   padding-top: 10px;
   border-top: 1px solid #e6e6e6;
@@ -2059,12 +2073,12 @@ section {
 #footer {
   color: #ffffff;
   font-size: 14px;
-  background: #007c9b;
+  background: #0478a3;
 }
 
 #footer .footer-top {
   padding: 60px 0 30px 0;
-  background: #007c9b;
+  background: #0478a3;
 }
 
 #footer .footer-top .footer-contact {
@@ -2219,4 +2233,19 @@ section {
   gap: 10px;
   padding-top: 20px;
   padding-bottom: 40px;
+}
+
+/* Add this CSS to your stylesheet */
+@keyframes slideRightToLeft {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+.partner[data-aos="fade-right"] {
+  animation: slideRightToLeft 1s ease forwards;
 }

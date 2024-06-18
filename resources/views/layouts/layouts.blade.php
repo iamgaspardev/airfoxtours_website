@@ -92,7 +92,7 @@
                         <li><a href="/about">About</a></li>
                         <li><a href="/service">Services</a></li>
                         <li><a href="/testmonials">Testimonials</a></li>
-                        <li><a href="/packageprice">Investment</a></li>
+                        <li><a href="/investments">Investment</a></li>
                         <li><a href="/visa">Tours</a></li>
                         <li><a href="/blog">Blog</a></li>
                         <li class="dropdown"><a href="#"><span>What we do</span> <i
@@ -142,8 +142,7 @@
                         <h3>Airfox Tours</h3>
                         <p>
                             Arusha road Street <br>
-                            <br>
-                            Dar es salaam <br><br>
+                            <br>Dar es salaam <br><br>
                             <strong>Phone:</strong> +255 662 41646<br>
                             <strong>Email:</strong> info@airfoxtours.com<br>
                         </p>
@@ -188,7 +187,8 @@
                     &copy; Copyright <strong><span>airfoxtours</span></strong>. All Rights Reserved
                 </div>
                 <div class="credits" style="color:#ffff">
-                    developed by <a href="https://www.trusttechnology.com" style="color:orange">trusttechnology</a>
+                    developed by <a href="https://www.trusttechnology.com"
+                        style="color:rgb(255, 149, 0)">trusttechnology</a>
                 </div>
             </div>
             <div class="social-links text-center text-md-right pt-3 pt-md-0">

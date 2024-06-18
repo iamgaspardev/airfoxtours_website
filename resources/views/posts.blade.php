@@ -16,7 +16,7 @@
                 <div class="row">
                     @foreach ($tours as $tour)
                         <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <div class="card">
+                            <div class="card" style="min-height: 500px;">
                                 <img src="{{ asset('uploads/' . $tour->image) }}" class="img-fluid card-img-top"
                                     alt="{{ $tour->title }}" style="height: 200px; object-fit: cover;">
                                 <div class="card-body col">
@@ -29,7 +29,7 @@
                                     </a></br>
                                     <a href="{{ route('consultationform', ['image' => basename($tour->image)]) }}"
                                         class="btn btn-primary mt-2"
-                                        style="background-color: #007c9b; color: white; border-color: #007c9b;">Consult
+                                        style="background-image: linear-gradient(to right, #007c9b, #fe825a); border-color: transparent;">Consult
                                         Us Now</a>
 
                                 </div>

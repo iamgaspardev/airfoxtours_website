@@ -37,39 +37,27 @@
                                     </div>
 
                                     <h2 class="entry-title">
-                                        <a href="blog-single.html">{{ $blog->title }}</a>
+                                        <a href="/blog">{{ $blog->title }}</a>
                                     </h2>
                                     <div class="entry-content">
-                                        <p href="blog-single.html">{{ $blog->content }}</p>
+                                        <p href="/blog">{{ $blog->content }}</p>
                                     </div>
                                     <div class="entry-meta">
                                         <ul>
                                             <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
-                                                    href="blog-single.html">airfox tours</a></li>
+                                                    href="/blog">airfox tours</a></li>
                                             <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                                                    href="blog-single.html"><time
-                                                        datetime="2020-01-01">{{ $blog->create_at }}</time></a>
+                                                    href="/blog"><time
+                                                        datetime="2020-01-01">{{ $blog->created_at }}</time></a>
                                             </li>
-                                            <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a
-                                                    href="blog-single.html">Comments</a></li>
+                                            {{-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a
+                                                    href="/blog">Comments</a></li> --}}
                                         </ul>
                                     </div>
                                 </div>
                             @endforeach
 
-                            <div class="entry-footer">
-                                <i class="bi bi-folder"></i>
-                                <ul class="cats">
-                                    <li><a href="#">Business</a></li>
-                                </ul>
 
-                                <i class="bi bi-tags"></i>
-                                <ul class="tags">
-                                    <li><a href="#">Creative</a></li>
-                                    <li><a href="#">Tips</a></li>
-                                    <li><a href="#">Marketing</a></li>
-                                </ul>
-                            </div>
 
                         </article><!-- End blog entry -->
 
@@ -85,12 +73,12 @@
                             <h3 class="sidebar-title">Categories</h3>
                             <div class="sidebar-item categories">
                                 <ul>
-                                    <li><a href="/">General <span>(25)</span></a></li>
-                                    <li><a href="/visa">Tours <span>(12)</span></a></li>
-                                    <li><a href="/visa">Travel <span>(5)</span></a></li>
-                                    <li><a href="#">Investment <span>(22)</span></a></li>
-                                    <li><a href="#">Car Rental <span>(8)</span></a></li>
-                                    <li><a href="#">Consultation <span>(14)</span></a></li>
+                                    <li><a href="/">General <span></span></a></li>
+                                    <li><a href="/visa">Tours <span></span></a></li>
+                                    <li><a href="/visa">Travel <span></span></a></li>
+                                    <li><a href="#">Investment <span></span></a></li>
+                                    <li><a href="#">Car Rental <span></span></a></li>
+                                    <li><a href="#">Consultation <span></span></a></li>
                                 </ul>
                             </div><!-- End sidebar categories-->
 
