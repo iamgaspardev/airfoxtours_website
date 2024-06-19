@@ -19,6 +19,7 @@ use App\Http\Controllers\TourController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\ConsultationController;
 use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\InterestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +37,7 @@ Route::get('/service',[ServiceController::class,'index']);
 Route::get('/about',[AboutController::class,'index']);
 Route::get('/contact',[ContactController::class,'index']);
 Route::get('/blog',[BlogController::class,'index']);
-Route::get('/investments',[PackageController::class,'index']);
+Route::get('/investments',[InterestController::class,'index']);
 // Route::get('/testmonials',[TestmonialController::class,'index']);
 Route::get('/visa',[PostController::class,'index']);
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
@@ -52,6 +53,7 @@ Route::get('/consult-us/{image}', [ConsultationController::class, 'showForm'])->
 // Route::get('/consult-us', [ConsultationController::class, 'showForm'])->name('consultationform');
 Route::post('/consult-us', [ConsultationController::class, 'requestConsultation'])->name('consultation.request');
 Route::get('/testmonials', [TestimonialController::class, 'index'])->name('testimonials.index');
+Route::post('/interests', [InterestController::class, 'store'])->name('interests.store');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [userController::class, 'index'])->name('user.home');
@@ -74,5 +76,8 @@ Route::middleware(['auth'])->group(function () {
 
      Route::get('/posts/views', [TourController::class, 'index'])->name('tours.index');
      Route::delete('/tour/{tour}', [TourController::class, 'destroy'])->name('tour.destroy');
+
+     Route::get('/admin/investment', [InterestController::class, 'dashboard'])->name('admin.investment');
+     Route::delete('/interests/{interest}', [InterestController::class, 'destroy'])->name('interests.destroy');
 
 });

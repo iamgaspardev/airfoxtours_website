@@ -87,6 +87,7 @@
                         </li>
                         <li><a href="/team/create">Add Team Member</a></li>
                         <li><a href="/consultations">View Application</a></li>
+                        <li><a href="/admin/investment">Investment Request</a></li>
                     @else
                         <li><a class="active" href="/">Home</a></li>
                         <li><a href="/about">About</a></li>
@@ -128,6 +129,17 @@
 
         </div>
     </header><!-- End Header -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
+        <div id="toastMessage" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-success text-white">
+                <strong class="me-auto">Success</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                Thanks for showing interest in Airfox Tours! We'll get back to you soon.
+            </div>
+        </div>
+    </div>
 
     @yield('content')
 
