@@ -53,7 +53,7 @@
                     <div class="col-lg-3 col-md-4 mb-4 text-center">
                         <div class="key-point">
                             <h4>5 Years</h4>
-                            <p>Trading Experience</p>
+                            <p>Travels Experience</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-4 mb-4 text-center">
@@ -64,7 +64,7 @@
                     </div>
                     <div class="col-lg-3 col-md-4 mb-4 text-center">
                         <div class="key-point">
-                            <h4>200+</h4>
+                            <h4>100+</h4>
                             <p>Satisfied Customers</p>
                         </div>
                     </div>

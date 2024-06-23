@@ -29,7 +29,27 @@
 
     <!-- Template Main CSS File -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background-color: #25D366;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
 
+        .whatsapp-button img {
+            width: 40px;
+            height: 40px;
+        }
+    </style>
 </head>
 
 <body>
@@ -128,6 +148,7 @@
             </nav><!-- .navbar -->
 
         </div>
+
     </header><!-- End Header -->
     <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 5">
         <div id="toastMessage" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
@@ -213,9 +234,13 @@
         </div>
     </footer><!-- End Footer -->
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <a href="#" style="margin-right: 5%; margin-bottom:0.7%"
+        class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/+255763111106" class="whatsapp-button" target="_blank" title="Chat with us on WhatsApp">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+    </a>
     <!-- Vendor JS Files -->
     <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
     <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
